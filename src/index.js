@@ -28,14 +28,38 @@ container.appendChild(element)
 import React from 'react'; // sera el analogo a createElement
 import ReactDOM from 'react-dom'; // sera el analogo a appendChild
 
-const element = <h1>Hello, my name is Julian !</h1> 
-// porque una etiqueta HTML sin commillas ? 
-// lo hace react al importar la libreria y tener la extension .jsx
-// JSX es una extension de javascript creada por Facebook
+// const jsx = <h1>Hello, my name is Julian !</h1> 
+
+// Requiere 3 parametros, 1= tipo de elemento, 2= atributos (en React se llaman props o properties), 3=children (similar a InnerText o InnerHtml)
+// Ejemplos: const element = React.createElement('h1', {}, 'Hola desde React.createElement...');
+// const element = React.createElement('a', { href: 'https://platzi.com'}, 'Ir a Platzi...');
+const name = 'Julian'
+// Usando React.createElement => const element = React.createElement('h1', {}, `Hola, soy ${name}`);
+// Usando JSX
+/*
+    // Ejemplo 1:
+    const sum = () => 100 + 200;
+    const jsx = <h1>Hola, soy {name}. Y la suma de 100 + 200 = {sum()}</h1>
+*/
+
+// Ejemplo 2:
+const jsx = <div>
+    <h1>Hola, soy Julian</h1>
+    <p>Soy desarrollador</p>
+</div>
+
+// Haciendo el mismo ejemplo 2 con React.createElement
+const element = React.createElement(
+    'div',
+    {},
+    React.createElement('h1', {}, 'Hola, soy Julian'),
+    React.createElement('p', {}, 'Soy desarrollador (opcional)'),
+)
 
 const container = document.getElementById('app');
 
 // ReactDOM.render(__qué__, __dónde__);
 ReactDOM.render(element, container); 
+// Nota, cambiar "element" por jsx en caso se quiera ver ese elemento
 
 
