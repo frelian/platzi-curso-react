@@ -1,5 +1,8 @@
 import React from 'react'; // sera el analogo a createElement
 import ReactDOM from 'react-dom'; // sera el analogo a appendChild
+import 'bootstrap/dist/css/bootstrap.css';
+
+import './global.css'
 import Badge from "./components/Badge";
 
 const container = document.getElementById('app');
