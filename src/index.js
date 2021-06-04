@@ -2,21 +2,13 @@ import React from 'react'; // sera el analogo a createElement
 import ReactDOM from 'react-dom'; // sera el analogo a appendChild
 import 'bootstrap/dist/css/bootstrap.css';
 
-import './global.css'
-import Badge from "./components/Badge";
+import './global.css';
+import BadgeNew from "./pages/BadgeNew";
 
 const container = document.getElementById('app');
 
 // ReactDOM.render(__qué__, __dónde__);
-ReactDOM.render(
-    <Badge
-        firstName="Julian"
-        lastName="Niño"
-        jobTile="Frontend Engineer"
-        twitter="frelians"
-        avatarUrl="https://www.gravatar.com/avatar?d=identicon"
-    />,
-    container);
+ReactDOM.render(<BadgeNew />, container);
 
 
 /* 

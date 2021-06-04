@@ -73,3 +73,7 @@ ReactDOM.render(<Badge
 container
 );
 ```
+## "Mi primera página" (Un componente que contiene más componentes)
+* Las páginas en React son componentes y conseguir distinguirlas nos servirá para saber que es un componente que adentro lleva otros componentes.
+Al escribir los props no importa el orden en el que lo hagas, únicamente importa el nombre.
+  
